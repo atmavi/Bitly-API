@@ -1,0 +1,6 @@
+7/17/2019, 7:33:46 PM-	https://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean/30707667 	http://bit.ly/2XPwSCr
+7/17/2019, 7:34:14 PM-	https://ide.goorm.io/my 	http://bit.ly/2JKxVd6
+7/17/2019, 7:34:35 PM-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise 	https://mzl.la/2XPst2f
+7/17/2019, 7:36:13 PM-	https://facebook.com 	http://bit.ly/2JKOo0F
+7/17/2019, 7:36:24 PM-	https://nodejs.org/docs/latest/api/fs.html#fs_fs_appendfile_path_data_options_callback 	http://bit.ly/2XIDP8a
+7/17/2019, 7:36:33 PM-	https://stackoverflow.com/questions/748175/asynchronous-vs-synchronous-execution-what-does-it-really-mean/30707667 	http://bit.ly/2XPwSCr
