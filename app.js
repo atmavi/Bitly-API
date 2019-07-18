@@ -19,6 +19,8 @@ app.get("/url/new", (req, res)=>{
 });
 
 app.post("/url", (req, res)=>{
+	
+	//Here goes Bitly API works
 	bitly
 	  .shorten(req.body.url)
 	  .then(function(result) {
@@ -28,22 +30,24 @@ app.post("/url", (req, res)=>{
 		
 		// LOG TO FILE LOG.TXT
 		try {
-		  fs.appendFileSync("./tmp/logs.txt", timeStamp+"-\t"+req.body.url+" \t"+result.url+"\n");
-		  console.log("Logged");
+		  	fs.appendFileSync("./tmp/logs.txt", timeStamp+"-\t"+req.body.url+" \t"+result.url+"\n");
+		  	console.log("Logged");
 		} catch (err) {
-		  console.log(err);
+		  	console.log(err);
 		}
 	  })
 	  .catch(function(error) {
 		console.error(error);
 	  });
-	});
+});
 
 //SHOW CREATED BITLY LINK
 app.get("/url", (req, res)=>{
 	res.render("show");
 });
 
+
+
 app.listen(3000, ()=>{
-	console.log("Yelp Camp app has started!");
+	console.log("The app has started!");
 });
