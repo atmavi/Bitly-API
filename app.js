@@ -9,14 +9,13 @@ const express		= require("express"),
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 
-
 //ROUTES
 app.get("/", (req, res)=>{
 	res.redirect("/url/new");
 });
 
 app.get("/url/new", (req, res)=>{
-	res.render("home");
+	res.render("new");
 });
 
 app.post("/url", (req, res)=>{
@@ -25,11 +24,12 @@ app.post("/url", (req, res)=>{
 	  .then(function(result) {
 		res.render("show", {result:result});
 		console.log(result);
+		let timeStamp= new Date().toLocaleString();
 		
-		timeStamp= new Date().toLocaleString();
+		// LOG TO FILE LOG.TXT
 		try {
 		  fs.appendFileSync("./tmp/logs.txt", timeStamp+"-\t"+req.body.url+" \t"+result.url+"\n");
-		  console.log('The "data to append" was appended to file!');
+		  console.log("Logged");
 		} catch (err) {
 		  console.log(err);
 		}
@@ -37,8 +37,9 @@ app.post("/url", (req, res)=>{
 	  .catch(function(error) {
 		console.error(error);
 	  });
-});
+	});
 
+//SHOW CREATED BITLY LINK
 app.get("/url", (req, res)=>{
 	res.render("show");
 });

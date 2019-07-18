@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+	
+	<div class="container">
+		<div class="jumbotron my-1">
+			<h1 class="mb-4">We make it as short as possible...</h1>
+			<p>Powered by Bitly</p>
+		</div>
+		
+		<form class="m-4" method="POST" action="/url">
+			<input class="d-block w-100 my-3" name="url" type="text" placeholder="Place your URL here...">
+			<button class="btn btn-success">Shorten</button>
+		</form>
+	</div>
+    
+
+<% include ./partials/footer %>
