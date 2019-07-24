@@ -3,7 +3,7 @@ const express		= require("express"),
 	  bodyParser	= require("body-parser"),
 	  fs			= require("fs"),
 	  BitlyClient 	= require('bitly').BitlyClient,
-	  bitly 		= new BitlyClient('b31d0dbb14ef6b899b33ab6006a56aaad5a47a8f'),
+	  bitly 		= new BitlyClient(process.env.BITLYKEY),
 	  app= express();
 
 app.set("view engine","ejs");
@@ -45,8 +45,6 @@ app.post("/url", (req, res)=>{
 app.get("/url", (req, res)=>{
 	res.render("show");
 });
-
-
 
 app.listen(3000, ()=>{
 	console.log("The app has started!");
