@@ -1,9 +1,9 @@
 //INSTALL NPM'S
 const express		= require("express"),
 	  bodyParser	= require("body-parser"),
-	  fs			= require("fs"),
+	  fs		= require("fs"),
 	  BitlyClient 	= require('bitly').BitlyClient,
-	  bitly 		= new BitlyClient(process.env.BITLYKEY),
+	  bitly 	= new BitlyClient(process.env.BITLYKEY),
 	  app= express();
 
 app.set("view engine","ejs");
